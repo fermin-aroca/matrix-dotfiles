@@ -1,0 +1,4 @@
+# One extension identifier per line. Blank lines and comments are ignored.
+editorconfig.editorconfig
+redhat.vscode-yaml
+timonwong.shellcheck

@@ -1,0 +1,8 @@
+{
+    "editor.formatOnSave": true,
+    "editor.rulers": [80, 120],
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.linux": "bash"
+}

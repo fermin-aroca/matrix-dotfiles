@@ -1,0 +1,26 @@
+# ============================================================
+# Matrix Dotfiles
+# ------------------------------------------------------------
+# Author    : Fermin Aroca
+# Started   : 1985 (6502 / 8085 / Z80 Edition)
+# License   : MIT
+# Platforms : Linux • macOS • Cloud • HPC • Proxmox • Kubernetes • LXC
+# ============================================================
+
+export EDITOR=${EDITOR:-vim}
+export VISUAL=${VISUAL:-$EDITOR}
+export PAGER=${PAGER:-less}
+export LANG=${LANG:-en_US.UTF-8}
+export LC_CTYPE=${LC_CTYPE:-$LANG}
+
+# Add personal executables when their directories exist and are not yet in PATH.
+for matrix_path_dir in "$HOME/.local/bin" "$HOME/bin"; do
+    if [ -d "$matrix_path_dir" ]; then
+        case ":$PATH:" in
+            *":$matrix_path_dir:"*) ;;
+            *) PATH="$matrix_path_dir:$PATH" ;;
+        esac
+    fi
+done
+export PATH
+unset matrix_path_dir

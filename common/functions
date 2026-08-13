@@ -1,0 +1,42 @@
+# ============================================================
+# Matrix Dotfiles
+# ------------------------------------------------------------
+# Author    : Fermin Aroca
+# Started   : 1985 (6502 / 8085 / Z80 Edition)
+# License   : MIT
+# Platforms : Linux • macOS • Cloud • HPC • Proxmox • Kubernetes • LXC
+# ============================================================
+
+# Create a directory and enter it.
+mkcd() {
+    [ "$#" -eq 1 ] || {
+        printf 'Usage: mkcd DIRECTORY\n' >&2
+        return 2
+    }
+    mkdir -p -- "$1" && cd -- "$1"
+}
+
+# Display the most common commands in shell history.
+histtop() {
+    history | awk '{$1=""; sub(/^ +/, ""); print}' |
+        sort | uniq -c | sort -rn | head -n "${1:-20}"
+}
+
+# Extract common archive formats without hiding failures.
+extract() {
+    [ -f "$1" ] || {
+        printf 'Not a file: %s\n' "$1" >&2
+        return 1
+    }
+    case $1 in
+        *.tar.bz2|*.tbz2) tar xjf "$1" ;;
+        *.tar.gz|*.tgz)   tar xzf "$1" ;;
+        *.tar.xz|*.txz)   tar xJf "$1" ;;
+        *.tar)            tar xf "$1" ;;
+        *.gz)             gzip -dk "$1" ;;
+        *.bz2)            bzip2 -dk "$1" ;;
+        *.xz)             xz -dk "$1" ;;
+        *.zip)            unzip "$1" ;;
+        *) printf 'Unsupported archive: %s\n' "$1" >&2; return 2 ;;
+    esac
+}

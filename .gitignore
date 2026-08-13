@@ -1,0 +1,31 @@
+# Local configuration and secrets
+.env
+.env.local
+*.local
+.gitconfig.local
+*credentials*
+*password*
+*token*
+
+# Private cryptographic material
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+
+# Editor and operating-system artifacts
+*~
+*.swp
+*.swo
+.DS_Store
+.idea/
+.vscode/*.local.json
+
+# Logs and temporary files
+*.log
+*.tmp
+.cache/

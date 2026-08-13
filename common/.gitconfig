@@ -1,0 +1,32 @@
+# ============================================================
+# Matrix Dotfiles
+# ------------------------------------------------------------
+# Author    : Fermin Aroca
+# Started   : 1985 (6502 / 8085 / Z80 Edition)
+# License   : MIT
+# Platforms : Linux • macOS • Cloud • HPC • Proxmox • Kubernetes • LXC
+# ============================================================
+
+[init]
+    defaultBranch = main
+[core]
+    editor = vim
+    autocrlf = input
+[pull]
+    ff = only
+[push]
+    default = simple
+    autoSetupRemote = true
+[fetch]
+    prune = true
+[diff]
+    algorithm = histogram
+[merge]
+    conflictStyle = zdiff3
+[color]
+    ui = auto
+[alias]
+    st = status --short --branch
+    lg = log --graph --decorate --oneline --all
+[include]
+    path = ~/.gitconfig.local

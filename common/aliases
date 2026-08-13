@@ -1,0 +1,19 @@
+# ============================================================
+# Matrix Dotfiles
+# ------------------------------------------------------------
+# Author    : Fermin Aroca
+# Started   : 1985 (6502 / 8085 / Z80 Edition)
+# License   : MIT
+# Platforms : Linux • macOS • Cloud • HPC • Proxmox • Kubernetes • LXC
+# ============================================================
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias dfh='df -h'
+alias duh='du -h'
+alias g='git'
+alias gs='git status --short --branch'
+alias k='kubectl'
