@@ -2,9 +2,7 @@
 " Matrix Dotfiles
 " ------------------------------------------------------------
 " Author    : Fermin Aroca
-" Started   : 1985 (6502 / 8085 / Z80 Edition)
 " License   : MIT
-" Platforms : Linux • macOS • Cloud • HPC • Proxmox • Kubernetes • LXC
 " ============================================================
 
 set encoding=utf-8
