@@ -103,5 +103,5 @@ changes before every commit.
 ```
 
 ## License
-
+#------------
 Released under the [MIT License](LICENSE). Copyright Fermin Aroca.
